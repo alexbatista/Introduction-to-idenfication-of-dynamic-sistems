@@ -559,7 +559,7 @@ def plot_dataset(
 def main() -> None:
     """Entry-point: identify all datasets and display results."""
     dataset_dir = Path(__file__).parent / "dataset"
-    dataset_files = sorted(dataset_dir.glob("*.txt"))
+    dataset_files = sorted(dataset_dir.glob("*.csv"))
 
     if not dataset_files:
         print("Nenhum arquivo .txt encontrado em dataset/")
