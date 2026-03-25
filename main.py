@@ -27,15 +27,16 @@ labels = [
 # Plotting the Step Responses
 plt.figure(figsize=(10, 6))
 
+T = np.linspace(0, 3, 1000)
+
 for sys, label in zip(systems, labels):
-    # Compute step response
-    # T, yout = ct.step_response(sys)
-    time, response = ct.step_response(sys)
+    time, response = ct.step_response(sys, T)
     plt.plot(time, response, label=label)
 
 plt.title('Step Response of Linear Systems')
 plt.xlabel('Time (seconds)')
 plt.ylabel('Amplitude')
+plt.xlim(left=0)
 plt.grid(True)
 plt.legend()
 plt.show()
