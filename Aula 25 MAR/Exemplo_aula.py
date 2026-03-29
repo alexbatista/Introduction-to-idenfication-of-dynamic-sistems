@@ -3,10 +3,10 @@ import numpy as np
 
 N = 1000
 
-a1 = 0.5
-a2 = 0.2
-b1 = 1.0
-b2 = 0.3
+a1 = 0.6
+a2 = 0.3
+b1 = 0.9
+b2 = 0.4
 
 # Create a random number generator
 # rng = np.random.default_rng()
@@ -14,10 +14,11 @@ b2 = 0.3
 # Generate N random floats between 0.0 (inclusive) and 1.0 (exclusive)
 # u = rng.random(size=N)
 u = np.random.uniform(size=N)
+e = np.random.normal(0, 0.01, size=N)
 y = np.zeros(N)
 
 for k in range(2, N):
-    y[k] = a1 * y[k - 1] + a2 * y[k - 2] + b1 * u[k - 1] + b2 * u[k - 2]
+    y[k] = a1 * y[k - 1] + a2 * y[k - 2] + b1 * u[k - 1] + b2 * u[k - 2] + e[k]
 
 
 # Método dos mínimos quadrados
