@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"import json; nb = json.load\\(open\\('Chapter5_book/roteiro_laboratorio_2.ipynb', encoding='utf-8'\\)\\); print\\('cells:', len\\(nb['cells']\\)\\); [print\\(i, c['cell_type'], \\(c.get\\('source'\\) or ['']\\)[0][:80] if c.get\\('source'\\) else ''\\) for i, c in enumerate\\(nb['cells']\\)]\")"
+    ]
+  }
+}
