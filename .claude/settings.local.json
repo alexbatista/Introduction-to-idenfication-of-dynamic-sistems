@@ -1,7 +1,14 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python -c \"import json; nb = json.load\\(open\\('Chapter5_book/roteiro_laboratorio_2.ipynb', encoding='utf-8'\\)\\); print\\('cells:', len\\(nb['cells']\\)\\); [print\\(i, c['cell_type'], \\(c.get\\('source'\\) or ['']\\)[0][:80] if c.get\\('source'\\) else ''\\) for i, c in enumerate\\(nb['cells']\\)]\")"
+      "Bash(python -c \"import json; nb = json.load\\(open\\('Chapter5_book/roteiro_laboratorio_2.ipynb', encoding='utf-8'\\)\\); print\\('cells:', len\\(nb['cells']\\)\\); [print\\(i, c['cell_type'], \\(c.get\\('source'\\) or ['']\\)[0][:80] if c.get\\('source'\\) else ''\\) for i, c in enumerate\\(nb['cells']\\)]\")",
+      "Bash(python3 -c \"import json,sys; nb=json.load\\(sys.stdin\\); print\\('nbformat:',nb.get\\('nbformat'\\),nb.get\\('nbformat_minor'\\)\\); print\\('metadata:'\\); print\\(json.dumps\\(nb.get\\('metadata',{}\\),indent=2\\)\\); print\\('num_cells:',len\\(nb['cells']\\)\\); print\\('cell types:',[c['cell_type'] for c in nb['cells']]\\)\")",
+      "Bash(python3 -c ' *)",
+      "Bash(.venv/bin/python -c ' *)",
+      "Bash(../.venv/bin/python _build_notebook.py)",
+      "Bash(../.venv/bin/jupyter nbconvert *)",
+      "Bash(../.venv/bin/pip install *)",
+      "Bash(../.venv/bin/python -c ' *)"
     ]
   }
 }
